@@ -1,0 +1,9 @@
+CREATE USER airflow WITH PASSWORD 'airflow';
+CREATE DATABASE airflow;
+GRANT ALL PRIVILEGES ON DATABASE airflow TO airflow;
+ALTER DATABASE airflow OWNER TO airflow;
+
+CREATE USER superset WITH PASSWORD 'superset';
+CREATE DATABASE superset;
+GRANT ALL PRIVILEGES ON DATABASE superset TO superset;
+ALTER DATABASE superset OWNER TO superset;

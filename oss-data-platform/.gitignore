@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+
+# Airflow
+logs/
+airflow-worker.pid
+airflow-webserver.pid
+airflow-scheduler.pid
+
+# dbt
+dbt_project/target/
+dbt_project/dbt_packages/
+dbt_project/logs/
+dbt_project/.user.yml
+
+# Development / Environment
+.env
+.venv
+venv/
+
+# OS/Editor
+.DS_Store
+.vscode/
+.idea/
+
+# Data & Database Files
+# Keep the sample CSV, ignore generated DB/Parquet files
+data/*.duckdb
+data/*.parquet
+data/*.db
+data/*.s3

@@ -1,0 +1,16 @@
+oss_data_platform:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: '/opt/airflow/data/my_db.duckdb' # Persisted DuckDB file
+      extensions:
+        - httpfs
+        - parquet
+      settings:
+        s3_endpoint: 'minio:9000'
+        s3_access_key_id: 'minioadmin'
+        s3_secret_access_key: 'minioadmin'
+        s3_use_ssl: false
+        s3_region: 'us-east-1'
+        s3_url_style: 'path'
